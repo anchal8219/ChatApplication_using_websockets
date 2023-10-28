@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Chat App</title>
+</head>
+<body>
+    <h1 class="title">iChat</h1>
+    <div class="main">
+        <div class="name">
+            <span><i class="far fa-user"></i></span>
+            <input 
+            type="text"
+            id="name-input"
+            class="name-input"
+            value="anonymous"
+            mxlength="20"
+            />
+
+        </div>
+        <ul class="msg-container" id="msg-container">
+            <li class="msg-left">
+                <p class="msg">
+                    lorem
+                    <span>bluebird 26 july</span>
+                </p>
+            </li>
+            <li class="msg-right">
+                <p class="msg">
+                    lorem
+                    <span>bluebird 26 july</span>
+                </p>
+            </li>
+            <li class="msg-feedback">
+                <p class="feedback" id="feedback">
+                    k is typing a msg
+                </p>
+            </li>
+        </ul>
+
+        <form class="msg-form" id="msg-form">
+            <input type="text" name="msg" id="msg-input" class="msg-input">
+            <div class="v-divider"></div>
+            <button type="submit" class="send-btn">
+                send <span><i class="fas fa-paper-plane"></i></span>
+            </button>
+        </form>
+    </div>
+    <h3 class="clients-total" id="clients-total">Total clients:2</h3>
+    
+    <!-- //require socket.io client script and the main.js file -->
+    <!-- socket.io.js is a client socket.io library -->
+    <script src="/socket.io/socket.io.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
